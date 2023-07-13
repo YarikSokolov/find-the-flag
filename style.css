@@ -1,0 +1,89 @@
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Rubik Puddles', cursive;
+    margin: 10px;
+}
+body{
+    background-image: url("i.webp");
+    text-align: center;
+}
+#rainbow img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 69px;
+    height: 150px;
+    object-fit: cover;
+
+}
+button{
+    width: 100%;
+    border-radius: 69px;
+    height: 40px;
+   /* размер букв */
+    font-size: 16px;
+    margin-bottom: 5px;
+    /* обводка */  
+       border: 4px dashed lightseagreen;
+    transition: 0.4s;
+}
+form{
+    width: 350px;
+    margin: auto;
+}
+button:hover{
+    border-color: red;
+}
+#rainbow{
+    background-image: linear-gradient(to right,red,orange,gold,green,rgb(0, 157, 255),blue,purple,red, orange,gold,green, rgb(0,157,255),blue,purple);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 73px;
+    background-size: 200% 100%;
+    animation: 1s infinite rainbow;
+    animation-timing-function: linear;
+
+}
+@keyframes rainbow{
+0%{
+    background-position: left;
+}
+100%{
+    background-position: right;
+}
+}
+#one,#two,#three{
+    width: 50px;
+}
+#MyScore{
+    color: blue;
+    margin-top: 0;
+}
+#fon{
+   /* зафиксировать позицию */
+    position: fixed;
+    /* удалить на задний фон */
+      z-index: -1;
+    /* ширина  */
+     width: 100%;
+    /* высота  */
+     height: 100%;
+    /* левый отступ */
+     left: 0;
+    /* ОТСТУП СВЕРХУ  */
+     top: 0;
+    object-fit: cover;
+    
+    /* анимация */
+     animation: 5.5s infinite fon;
+}
+@keyframes fon{
+0%{
+filter: hue-rotate(0deg);
+}
+100%{
+    filter: hue-rotate(360deg);
+}
+}
